@@ -6,11 +6,11 @@ var sass = require('gulp-sass');
 gulp.task('default', defaultTask);
 
 function defaultTask(done) {
-  done();
+	done();
 }
 
 gulp.task('sass', function() {
-  return gulp.src('src/scss/**/*.scss') 
+	return gulp.src('src/scss/**/*.scss') 
 	.pipe(sass())
 	.pipe(gulp.dest('./'))
 })
@@ -19,4 +19,4 @@ gulp.task('watch', gulp.series('sass', function() {
 	gulp.watch('./src/scss/**/*.scss').on('change', gulp.parallel('sass'));
 }));
 
-  gulp.task('default'['watch', 'sass']);
+	gulp.task('default'['watch', 'sass']);

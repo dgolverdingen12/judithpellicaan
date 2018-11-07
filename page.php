@@ -1,4 +1,9 @@
 <?php get_header(); ?>
-	<h1><?php the_title();?></h1>
-	<p><?php the_content();?></p>
+	<?php
+	while ( have_posts() ) : the_post(); ?>
+		<div class="homepage">
+			<h1><?php the_title();?></h1>
+			<p><?php the_content();?></p>
+		</div>
+	<?php endwhile; ?>
 <?php get_footer(); ?>

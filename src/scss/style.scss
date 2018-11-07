@@ -8,3 +8,14 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+@import 'src/scss/mixins';
+@import 'src/scss/variables';
+
+body {
+	color: $black;
+}
+
+p {
+	@include font1;
+}
